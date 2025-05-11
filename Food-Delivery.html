@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Food Delivery Funnel Insights</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      body {
+        background-color: #f9f9f9;
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+      }
+
+      .main-container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
+      }
+
+      .btn-primary {
+        background-color: #ffc107;
+        border-color: #ffc107;
+        color: #000;
+      }
+
+      .btn-primary:hover {
+        background-color: #e0a800;
+        border-color: #d39e00;
+      }
+
+      h2, h5 {
+        color: #444;
+        font-weight: bold;
+      }
+
+      p {
+        color: #555;
+        font-size: 15px;
+      }
+
+      .divider {
+        border-top: 3px solid #888;
+        margin: 30px 0;
+        width: 80px;
+      }
+
+      ul {
+        padding-left: 20px;
+        color: #444;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+      }
+
+      img {
+        border-radius: 8px;
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <div class="main-container">
+
+      <!-- Back Button -->
+      <a href="index1.html#project-section" class="btn btn-primary">Back</a>
+
+      <!-- Title and Tools -->
+      <h2 class="mt-3">Food Delivery Funnel Insights</h2>
+      <p><strong>Python | Tableau | Excel
+    </strong></p>
+      <hr class="divider">
+
+      <!-- Dashboard Image -->
+      <img src="images/Food_Delivery_Dashboard.png" alt="Food Delivery Funnel Insights" style="width: 100%;">
+
+      <p>
+        Analyzed 45K+ delivery records using Python, Excel, and Tableau to uncover trends in delays, 
+        weather impact, and city-wise delivery times. Identified 74% spike in festival-day delays and 
+        lower ratings during sunny conditions to guide operational improvements.
+      </p>
+
+      <!-- Questions Answered -->
+      <h5 style="margin-top: 30px;">Here are the questions I was interested in answering:</h5>
+      <p>
+        1) What is the average delivery rating?<br>
+        2) What are the most common weather conditions during delays?<br>
+        3) Does traffic impact delivery time?<br>
+        4) What is the impact of festivals on delivery delays?<br>
+        5) What are the most common times for delays?<br>
+        6) How does weather affect customer ratings?<br>
+        7) At what times of day are orders at their peak in each city?<br>
+        8) How are delivery times and weather conditions distributed across the country?<br>
+        9) Which cities experience the highest average delivery times, and during which hours?<br>
+        10) How do traffic and weather jointly impact delivery efficiency and customer satisfaction?
+      </p>
+
+      <!-- Process -->
+      <h5 style="margin-top: 30px;">I took the following steps to create my analysis:</h5>
+      <p>
+        1) <strong> Preprocessing & ETL (Python):</strong>
+        Cleaned and transformed raw delivery data using pandas — handled null values, standardized columns, 
+        merged date-time fields, and engineered features such as delivery delay duration, order hour, and weather impact flags.<br>
+        <div style="margin-bottom: 20px;">
+          <img src="images/foos-py-extract.PNG" alt="Food Delivery Funnel Insights" style="width: 75%;">
+        </div>
+        <div style="margin-bottom: 20px;">
+          <img src="images/foos-py-trans1PNG.PNG" alt="Food Delivery Funnel Insights" style="width: 75%;">
+        </div>
+        <div style="margin-bottom: 20px;">
+          <img src="images/foos-py-trans2PNG.PNG" alt="Food Delivery Funnel Insights" style="width: 75%;">
+        </div>
+        <div style="margin-bottom: 20px;">
+          <img src="images/foos-py-trans3PNG.PNG" alt="Food Delivery Funnel Insights" style="width: 75%;">
+        </div>
+        <div style="margin-bottom: 20px;">
+          <img src="images/foos-py-trans4PNG.PNG" alt="Food Delivery Funnel Insights" style="width: 75%;">
+        </div>
+        <div style="margin-bottom: 20px;">
+          <img src="images/foos-py-loadPNG.PNG" alt="Food Delivery Funnel Insights" style="width: 55%;">
+        </div>
+       2) <strong> Analysis & Metrics (Advanced Excel):</strong>
+        Conducted deep-dive analysis using pivot tables, GETPIVOTDATA, conditional formulas, and statistical functions (like MAX, MODE.SNGL) 
+        to extract key insights on delivery time, traffic impact, weather patterns, and festival influence.<br>
+        <div style="margin-bottom: 20px;">
+          <img src="images/Food-PV1.PNG" alt="Food Delivery Funnel Insights" style="width: 55%;">
+        </div>
+        <div style="margin-bottom: 20px;">
+          <img src="images/Food-PV2.PNG" alt="Food Delivery Funnel Insights" style="width: 55%;">
+        </div>
+       3) <Strong>Interactive Visualization (Tableau):</Strong>
+        Built a dynamic dashboard with visual filters (slicers for city, festival, weather), KPI cards, bar and line charts, 
+        and geographic symbol maps — allowing stakeholders to explore delivery trends by time, location, and external conditions.
+      </p>
+
+      <!-- Key Takeaways -->
+      <h5 style="margin-top: 30px;">Here are my key takeaways:</h5>
+      <ul>
+        <li>The average delivery time was 26 minutes, with a maximum delay reaching up to 54 minutes.</li>
+        <li>Fog was the most common weather condition observed during delayed deliveries.</li>
+        <li>Traffic congestion was a major contributor to delivery delays, especially in metro areas during peak hours.</li>
+        <li>City-wise trends revealed that delivery performance varied sharply by location and hour, with some cities peaking in orders late at night.</li>
+        <li>Semi-urban regions saw the majority of orders post-12 PM, and these areas also had higher average delivery times than metropolitan cities.</li>
+        <li>Bad traffic and weather conditions consistently contributed to delays, especially during evening hours in metro cities.</li>
+        <li>Customer ratings dropped by over 13% during sunny conditions, highlighting a potential risk to satisfaction during adverse weather.</li>
+        <div style="margin-bottom: 20px;">
+          <img src="images/Screenshot (67).png" alt="Food Delivery Funnel Insights" style="width: 55%;">
+        </div>
+        <li>Wednesdays had the longest average delivery times, while Saturdays during festivals experienced even greater delays.</li>
+        <div style="margin-bottom: 20px;">
+          <img src="images/food-wed.PNG" alt="Food Delivery Funnel Insights" style="width: 55%;">
+        </div>
+        <div style="margin-bottom: 20px;">
+          <img src="images/food-sat.PNG" alt="Food Delivery Funnel Insights" style="width: 55%;">
+        </div>
+        <li>The most common delays occurred between 6 PM to 9 PM, reinforcing the importance of operational efficiency during dinner-time orders.</li>
+      </ul>
+
+    </div>
+  </body>
+</html>

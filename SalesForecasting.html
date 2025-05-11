@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sales Forecasting of Walmart Data using Hybrid Machine Learning Models</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      body {
+        background-color: #f9f9f9;
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+      }
+
+      .main-container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
+      }
+
+      .btn-primary {
+        background-color: #ffc107;
+        border-color: #ffc107;
+        color: #000;
+      }
+
+      .btn-primary:hover {
+        background-color: #e0a800;
+        border-color: #d39e00;
+      }
+
+      h2, h5 {
+        color: #444;
+        font-weight: bold;
+      }
+
+      p {
+        color: #555;
+        font-size: 15px;
+      }
+
+      .divider {
+        border-top: 3px solid #888;
+        margin: 30px 0;
+        width: 80px;
+      }
+
+      ul {
+        padding-left: 20px;
+        color: #444;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+      }
+
+      img {
+        border-radius: 8px;
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <div class="main-container">
+
+      <!-- Back Button -->
+      <a href="index1.html#project-section" class="btn btn-primary">Back</a>
+
+      <!-- Title and Tools -->
+      <h2 class="mt-3">Sales Forecasting of Walmart Data using Hybrid Machine Learning Models</h2>
+      <p><strong>Python | Machine Learning
+      </strong></p>
+      <hr class="divider">
+
+      <!-- Dashboard Image -->
+      <img src="images/ARIMA-RF.PNG" alt="Sales Forecasting" style="width: 100%;">
+
+      <p>
+        Built a hybrid ARIMA-Random Forest model on Walmart’s sales data to forecast weekly sales. 
+        Achieved high accuracy (MSE: 0.0179) and identified key patterns across stores and departments to 
+        support inventory and planning decisions.
+      </p>
+
+      <!-- Questions Answered -->
+      <h5 style="margin-top: 30px;">Here are the questions I was interested in answering:</h5>
+      <p>
+        1) What was the business objective of your project?<br>
+        2) How does removing outliers affect model performance?
+        <br>
+        3) How do different machine learning models perform in forecasting retail sales?
+        <br>
+        4) What is the most suitable forecasting model for a large retail dataset with mixed trends and noise?<br>
+        5) How did you decide on the hybrid ARIMA-RF model?
+        <br>
+        6) How does Random Forest complement ARIMA in your hybrid model?<br>
+        7) What features did you engineer from the date field?<br>
+        8) Why is forecasting important for retail businesses like Walmart?
+      </p>
+
+      <h5>What was the business objective of your project?</h5>
+      <p>
+        The goal was to forecast weekly sales for Walmart stores by identifying trends, seasonality, and irregular sales patterns to improve demand planning, inventory management, and revenue forecasting.
+      </p>
+
+      
+
+      <!-- Process -->
+      <h5 style="margin-top: 30px;">I took the following steps to create my analysis:</h5>
+
+      <ul>
+        <li>Collected data from the Walmart Sales Forecasting dataset on Kaggle (sales, features, and store information).</li>
+        <li>Merged datasets using <strong>Store</strong> and <strong>Date</strong> as keys.</li>
+        <img src="images/merge_dataset.PNG" alt="Sales Forecasting" style="width: 55%;">
+        <li>Handled missing values: filled CPI and Unemployment with median; MarkDowns with 0 for missing/negative values.</li>
+        <img src="images/handling_missing_values.PNG" alt="Sales Forecasting" style="width: 55%;">
+      </ul>
+
+      <!-- Feature Engineering -->
+      <h5>Feature Engineering</h5>
+      <ul>
+        <li>Extracted <strong>year</strong>, <strong>month</strong>, and <strong>week</strong> from the Date field.</li>
+        <li>Calculated <strong>total markdown</strong> by summing MarkDown1–5 and dropped individual columns.</li>
+        <li>Applied <strong>one-hot encoding</strong> to Store, Dept, and Type using <code>pd.get_dummies()</code>.</li>
+        <li>Removed outliers using <strong> z-score normalization </strong>and filtered out records with negative weekly sales for cleaner model input.</li>
+        <li>Applied <strong>Recursive Feature Elimination (RFE)</strong> to select top contributing features.</li>
+        <div style="margin-bottom: 20px;">
+          <img src="images/outlier.PNG" alt="Sales Forecasting" style="width: 20%; display: block; margin-bottom: 8px;">
+          <label>Output of dataset without outliers</label>
+        </div>
+
+
+        
+      </ul>
+
+      <!-- Outlier Removal -->
+      <h5>How does removing outliers affect model performance?</h5>
+      <p>
+        Removing outliers reduced variance in model predictions, prevented skewing of model weights, and improved accuracy, especially for models sensitive to large deviations like ARIMA and ANN.
+      </p>
+
+      <!-- Model Building -->
+      <h5>How do different machine learning models perform in forecasting retail sales?</h5>
+      <ul>
+        <li><strong>ARIMA:</strong> Good at modeling linear trends and seasonality but struggled with noise.</li>
+        <li><strong>Holt-Winters:</strong> Simple seasonal model but less accurate than ensemble methods.</li>
+        <li><strong>Prophet:</strong> Useful for daily/weekly seasonality, easy to tune.</li>
+        <li><strong>ANN:</strong> Performed decently but required more tuning and data normalization.</li>
+        <li><strong>Random Forest:</strong> Captured non-linear patterns and interactions well.</li>
+      </ul>
+      
+      
+
+      <!-- Hybrid Model -->
+      <h5>What is the most suitable forecasting model for a large retail dataset with mixed trends and noise?</h5>
+      <p>
+        A hybrid ARIMA-Random Forest model performed best by combining ARIMA's strength in trend/seasonality with Random Forest’s power to capture residual, non-linear behavior.
+      </p>
+
+      <h5>How did you decide on the hybrid ARIMA-RF model?</h5>
+      <p>
+        After analyzing ARIMA residuals and noticing patterns that ARIMA failed to capture, I trained a Random Forest on those residuals, significantly improving the overall forecast accuracy.
+      </p>
+
+      <h5>How does Random Forest complement ARIMA in your hybrid model?</h5>
+      <p>
+        ARIMA handled the linear and seasonal components, while Random Forest modeled the residuals, capturing non-linearities and store-specific behaviors that ARIMA missed.
+      </p>
+
+      <div style="text-align: center; margin-bottom: 20px;">
+        <img src="images/Structure.PNG" alt="Sales Forecasting" style="width: 25%;">
+        <p style="margin-top: 15px; font-weight: 500; color: #333333;">
+          Architecture of the Hybrid Model
+        </p>
+      </div>
+
+      <!-- Forecasting Importance -->
+      <h5>Why is forecasting important for retail businesses like Walmart?</h5>
+      <p>
+        Accurate forecasts help Walmart optimize inventory, reduce stockouts and overstocks, plan promotions effectively, and align staffing and logistics with expected demand.
+      </p>
+
+      <!-- Key Takeaways -->
+      <h5 style="margin-top: 30px;">Here are my key takeaways:</h5>
+      <ul>
+        <li>The hybrid ARIMA-RF model achieved the lowest MSE (0.0179), offering the most accurate forecasts.</li>
+        <li>Data cleaning, especially handling missing values and outliers, is crucial for model stability.</li>
+        <li>Economic indicators like CPI and Unemployment are strong predictors of retail sales trends.</li>
+        <li>ARIMA alone is not sufficient for complex retail data due to its inability to handle non-seasonal and nonlinear patterns effectively.</li>
+        <li>Ensemble models like Random Forest improve performance by reducing overfitting and capturing variable importance.</li>
+        <li>Forecasting enables better resource allocation, financial planning, and operational efficiency in retail.</li>
+      </ul>
+
+    </div>
+  </body>
+</html>

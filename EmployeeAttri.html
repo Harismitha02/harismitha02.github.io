@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Employee Attrition Analysis</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      body {
+        background-color: #f9f9f9;
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+      }
+
+      .main-container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
+      }
+
+      .btn-primary {
+        background-color: #ffc107;
+        border-color: #ffc107;
+        color: #000;
+      }
+
+      .btn-primary:hover {
+        background-color: #e0a800;
+        border-color: #d39e00;
+      }
+
+      h2, h5 {
+        color: #444;
+        font-weight: bold;
+      }
+
+      p {
+        color: #555;
+        font-size: 15px;
+      }
+
+      .divider {
+        border-top: 3px solid #888;
+        margin: 30px 0;
+        width: 80px;
+      }
+
+      ul {
+        padding-left: 20px;
+        color: #444;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+      }
+
+      img {
+        border-radius: 8px;
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <div class="main-container">
+
+      <!-- Back Button -->
+      <a href="index1.html#project-section" class="btn btn-primary">Back</a>
+
+      <!-- Title and Tools -->
+      <h2 class="mt-3">Employee Attrition Analysis Dashboard</h2>
+      <p><strong>SQL | Power BI</strong></p>
+      <hr class="divider">
+
+      <!-- Dashboard Image -->
+      <img src="images/Employee_Attrition_Dashboard.PNG" alt="Attrition Dashboard" style="width: 100%;">
+
+      <p>
+        Designed a Power BI dashboard using MySQL data to analyze attrition trends across departments, roles, 
+        and demographics. Uncovered a 16.1% attrition rate and key insights to support HR decisions.
+      </p>
+
+      <!-- Questions Answered -->
+      <h5 style="margin-top: 30px;">Here are the questions I was interested in answering:</h5>
+      <p>
+        1) Which departments have the highest attrition rates?<br>
+        2) Are there trends in attrition over time?<br>
+        3) Does work-life balance influence attrition?<br>
+        4) How does marital status and gender impact attrition?<br>
+        5) Which job roles have income or satisfaction disparities?<br>
+        6) What is the satisfaction trend across departments?<br>
+        7) Are certain age groups more likely to leave?<br>
+        8) What is the overall attrition rate and average salary?
+      </p>
+
+      <!-- Process -->
+      <h5 style="margin-top: 30px;">I took the following steps to create my analysis:</h5>
+      <p>
+        1) <Strong>Data Understanding:</Strong> Analyzed employee dataset with 30+ features covering demographics, job details, and satisfaction scores.<br>
+        2) <Strong>Database Setup:</Strong> Imported and structured data in MySQL; cleaned field names and handled inconsistencies.<br>
+        3) <Strong>Data Cleaning:</Strong> Removed duplicates, handled nulls, fixed data types, and grouped values (e.g., age groups).<br>
+        <div style="margin-bottom: 20px;">
+          <img src="images/data_cleaning.PNG" alt="Attrition Dashboard" style="width: 45%;"><br>
+          <img src="images/null_val.PNG" alt="Attrition Dashboard" style="width: 45%;"><br>
+          <img src="images/checks.PNG" alt="Attrition Dashboard" style="width: 50%;"><br>
+          <img src="images/group.PNG" alt="Attrition Dashboard" style="width: 55%;">
+          </p>
+        </div>
+        4) <Strong>SQL View Creation:</Strong> Created multiple SQL views for KPIs like attrition rate, department-wise trends, and income by role.<br>
+        <div style="margin-bottom: 20px;">
+          <img src="images/Screenshot (63).png" alt="Attrition Dashboard" style="width: 55%;"><br>
+          <img src="images/Screenshot (64).png" alt="Attrition Dashboard" style="width: 55%;"><br>
+          <img src="images/Screenshot (65).png" alt="Attrition Dashboard" style="width: 55%;"><br>
+          </p>
+        </div>
+        5) <Strong>Power BI Integration:</Strong> Connected Power BI to the MySQL database using the MySQL connector for live data access.<br>
+        6) <Strong>DAX Measures:</Strong> Created key metrics: Attrition Rate, Avg. Monthly Income, Satisfaction Index, and more.<br>
+        7) <Strong>Visualizations:</Strong> Designed interactive dashboard with slicers, cards, bar/pie/line charts for insights across departments, roles, and demographics.<br>
+        8) <Strong>Advanced Insights:</Strong> Added Attrition Trend Over Time, Work-Life Balance distribution, and role-based income gaps.<br>
+        9) <Strong>Design Optimization:</Strong> Organized layout with slicers on top, KPIs in cards, and charts grouped for clarity.<br>
+        10)<Strong>Recommendations:</Strong> Derived actionable HR insights from satisfaction patterns, high-attrition roles, and tenure trends.
+      </p>
+
+      <!-- Key Takeaways -->
+      <h5 style="margin-top: 30px;">Here are my key takeaways:</h5>
+      <ul>
+        <li>Attrition Rate stands at 16.1%, with higher attrition observed in Sales and Human Resources departments.</li>
+        <div style="margin-bottom: 20px;">
+          <img src="images/attri_rate.PNG" alt="Attrition Dashboard" style="width: 55%;">
+        </div>
+        <li>Research Directors, primarily in the 41–50 age group and mostly married, report the highest average satisfaction and income levels, with an attrition rate as low as 2.5%.</li>
+        <div style="margin-bottom: 20px;">
+          <img src="images/Emp_RD.PNG" alt="Attrition Dashboard" style="width: 55%;">
+        </div>
+        <li>Younger employees (age 20–30) and those living farther from the office show increased attrition.</li>
+        <div style="margin-bottom: 20px;">
+          <img src="images/Emp_DOH.PNG" alt="Attrition Dashboard" style="width: 55%;">
+        </div>
+        <li>Work-Life Balance scores are skewed toward good, with fewer employees reporting low balance.</li>
+        <li>Employees with lower satisfaction and lower income roles (like Laboratory Technician, Sales Representative) exhibit higher attrition.</li>
+        <li>Marital Status shows that single employees have a noticeably higher attrition rate.</li>
+        <li>Satisfaction scores are highest in R&D roles but dip in Sales-related jobs, suggesting engagement gaps.</li>
+        <li>Attrition trend over time remains fairly stable but shows periodic spikes—possibly linked to performance review cycles or policy changes.</li>
+      </ul>
+
+    </div>
+  </body>
+</html>

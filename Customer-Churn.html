@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Customer Churn Analysis Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      body {
+        background-color: #f9f9f9;
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+      }
+
+      .main-container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.05);
+      }
+
+      .btn-primary {
+        background-color: #ffc107;
+        border-color: #ffc107;
+        color: #000;
+      }
+
+      .btn-primary:hover {
+        background-color: #e0a800;
+        border-color: #d39e00;
+      }
+
+      h2, h5 {
+        color: #444;
+        font-weight: bold;
+      }
+
+      p {
+        color: #555;
+        font-size: 15px;
+      }
+
+      .divider {
+        border-top: 3px solid #888;
+        margin: 30px 0;
+        width: 80px;
+      }
+
+      ul {
+        padding-left: 20px;
+        color: #444;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+      }
+
+      img {
+        border-radius: 8px;
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <div class="main-container">
+
+      <!-- Back Button -->
+      <a href="index1.html#project-section" class="btn btn-primary">Back</a>
+
+      <!-- Title and Tools -->
+      <h2 class="mt-3">Customer Churn Analysis Dashboard</h2>
+      <p><strong>Power Query | Power BI</strong></p>
+      <hr class="divider">
+
+      <!-- Dashboard Image -->
+      <img src="images/Customer_Churn_Dashboard.png" alt="Customer Churn Dashboard" style="width: 100%;">
+
+      <p>
+        In this analysis, I explored a telecom dataset to uncover patterns behind customer churn. Using Power BI, 
+        I created a dynamic dashboard to answer key business questions like what drives churn, which segments are most at risk, 
+        and how revenue is impacted. The goal was to provide actionable insights to improve customer retention strategies.
+
+      </p>
+
+      <!-- Questions Answered -->
+      <h5 style="margin-top: 30px;">Here are the questions I was interested in answering:</h5>
+      <p>
+        1) What is the overall churn rate?<br>
+        2) What is the billing preference among customers?<br>
+        3) Does revenue influence the churn rate?<br>
+        4) How do demographics affect customer churn?<br>
+        5) How is the payment made?<br>
+        6) What services are enabled by customers?<br>
+        7) Which tenure groups are more likely to churn?
+      </p>
+
+      <!-- Process -->
+      <h5 style="margin-top: 30px;">I took the following steps to create my analysis:</h5>
+      <p>
+        1) <strong>Data Collection & Import:</strong> Imported the Customer Churn dataset into Power BI and explored its structure.<br>
+        2) <strong>Data Cleaning using Power Query:</strong> Removed null and duplicate values, corrected data types, and created calculated columns like <em>TotalServices</em> and grouped <em>Tenure</em>.<br>
+        <div style="margin-bottom: 20px;">
+          <img src="images/Screenshot (66).png" alt="Customer Churn" style="width: 75%;">
+        </div>
+        3) <strong>Feature Engineering:</strong> Added a custom <em>Risk Score</em> based on contract type, monthly charges, tenure, and senior citizen status. Categorized <em>Risk Level</em> and created <em>Revenue Categories</em>.<br>
+        4) <strong>Visual Exploration & KPI Setup:</strong> Built DAX measures for churn rate, total customers, churned customers, revenue loss, and more. Applied dynamic KPI formatting.<br>
+        5) <strong>Dashboard Design:</strong> Used bar charts, pie charts, and heatmaps. Added slicers for gender, tenure, services, and payment type. Organized dashboard into sections for clear insights.<br>
+        6) <strong>Insight Generation:</strong> Answered key business questions around churn trends, revenue impact, and at-risk customer groups.
+      </p>
+
+      <!-- Key Takeaways -->
+      <h5 style="margin-top: 30px;">Here are my key takeaways:</h5>
+      <ul>
+        <li>Identified a 47.7% churn rate, highest among customers with ≤12 months tenure—highlighting early-stage retention concerns.</li>
+        <div style="margin-bottom: 20px;">
+          <img src="images/churn-1.PNG" alt="Customer Churn" style="width: 55%;">
+        </div>
+        <li>90% of users opt for Phone Service, suggesting it’s a standard inclusion rather than a churn driver.</li>
+        <div style="margin-bottom: 20px;">
+          <img src="images/churn-2.PNG" alt="Customer Churn" style="width: 55%;">
+        </div>
+        <li>Half of customers are partners—offering a segment for couple- or family-oriented retention efforts.</li>
+        <li>Month-to-Month contracts and Paperless Billing account for 42% of churn, pointing to low-commitment users needing targeted engagement.</li>
+        <div style="margin-bottom: 20px;">
+          <img src="images/churn-3.PNG" alt="Customer Churn" style="width: 55%;">
+        </div>
+        <li>2-Year contract users show only 2.8% churn and are generally low-risk, loyal customers.</li>
+        <div style="margin-bottom: 20px;">
+          <img src="images/churn-4.PNG" alt="Customer Churn" style="width: 55%;">
+        </div>
+        <li>Electronic Check payers are most likely to churn (45.3%), especially on Month-to-Month plans.</li>
+        <div style="margin-bottom: 20px;">
+          <img src="images/churn-5.PNG" alt="Customer Churn" style="width: 55%;">
+        </div>
+        <li>Credit Card and Mailed Check users are long-term, low-risk segments worth nurturing.</li>
+      </ul>
+
+    </div>
+  </body>
+</html>
